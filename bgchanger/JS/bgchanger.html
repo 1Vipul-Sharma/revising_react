@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BGchanger</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            transition: background-color 0.5s ease-in-out;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        select {
+            padding: 10px;
+            font-size: 13px;
+            border-radius: 5px;
+        }
+    </style>
+    
+</head>
+<body>
+    <div>
+        <h3>Select a Color:</h3>
+        <select id="colorPicker" >
+            <option value="">Choose a color</option>
+            <option value="red">Red</option>
+            <option value="green">Green</option>
+            <option value="blue">Blue</option>
+            <option value="yellow">Yellow</option>
+            <option value="purple">Purple</option>
+            <option value="black">Black</option>
+            <option value="white">White</option>
+        </select>
+    </div>
+    <script>
+        let currColor=document.getElementById('colorPicker');
+        // console.log(currColor)
+        currColor.addEventListener('change',function (){
+            // console.log(currColor.value);
+            document.body.style.backgroundColor = this.value;
+        })
+    </script>
+</body>
+</html>
